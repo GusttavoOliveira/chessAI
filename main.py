@@ -1,4 +1,4 @@
-from scripts.board import display_new_move
+from scripts.chess_logic import display_new_move
 
 def main():           
     
