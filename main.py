@@ -1,8 +1,7 @@
-from scripts.chess_logic import display_new_move
+from scripts.chess_logic import ChessGame
 
 def main():           
-    
-    display_new_move()
+    pass
         
 if __name__ == "__main__":
     main()
