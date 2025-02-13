@@ -5,7 +5,7 @@ Este projeto tem como objetivo desenvolver e treinar duas inteligências artific
 
 ## 🧠 Tecnologias Utilizadas
 - Python 🐍
-- `python-chess` ♟️ (biblioteca para manipulação do jogo de xadrez)
+- `chess` ♟️ (biblioteca para manipulação do jogo de xadrez)
 - `TensorFlow` ou `PyTorch` (para aprendizado de máquina)
 - `OpenAI Gym` (para ambiente de reforço)
 - `Flask` ou `FastAPI` (se desejar criar uma API para visualização das partidas)

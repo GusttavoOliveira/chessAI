@@ -1,40 +1,7 @@
-import chess
-import chess.svg
-from IPython.display import display, SVG
+from scripts.chess_logic import ChessGame
 
-def main():
-    board = chess.Board()
-
-    while not board.is_game_over():
-        # Salva o tabuleiro como arquivo SVG
-        with open("board.svg", "w") as f:
-            f.write(chess.svg.board(board=board))
-            
-        move = input("Enter your move: ")
+def main():           
+    pass
         
-        try:
-            board.push_san(move)
-        except chess.InvalidMoveError:
-            print("Invalid move!")
-            continue
-        except chess.IllegalMoveError:
-            print("Illegal move!")
-            continue
-        except chess.AmbiguousMoveError:
-            print("Ambiguous move!")
-            continue
-
-        if board.is_checkmate():
-            print("Checkmate!")
-            break
-
-        if board.is_check():
-            print("Check!")
-
-    # Salva o tabuleiro como arquivo SVG
-    with open("board.svg", "w") as f:
-        f.write(chess.svg.board(board=board))
-
-
 if __name__ == "__main__":
     main()
