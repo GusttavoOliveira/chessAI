@@ -1,7 +1,6 @@
 import chess
 import chess.svg
 
-
 class ChessGame:
     def __init__(self):
         self.board = chess.Board()
