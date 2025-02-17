@@ -6,9 +6,9 @@ Este projeto tem como objetivo desenvolver e treinar duas inteligências artific
 ## 🧠 Tecnologias Utilizadas
 - Python 🐍
 - `chess` ♟️ (biblioteca para manipulação do jogo de xadrez)
-- `TensorFlow` ou `PyTorch` (para aprendizado de máquina)
+- `PyTorch` (para aprendizado de máquina)
 - `OpenAI Gym` (para ambiente de reforço)
-- `Flask` ou `FastAPI` (se desejar criar uma API para visualização das partidas)
+- `Flask` (Como API para visualizar as partidas)
 - `Matplotlib` (para visualização do progresso do treinamento)
 - `Jupyter Notebook` (para experimentação e análise)
 
@@ -55,7 +55,7 @@ chessAI/
 4. O progresso pode ser acompanhado através de estatísticas e gráficos gerados pelo script.
 
 ## 📌 Roadmap
-- [ ] Implementar motor básico de jogo
+- [OK] Implementar motor básico de jogo
 - [ ] Criar a lógica de aprendizado por reforço
 - [ ] Treinar e salvar modelos
 - [ ] Criar visualização gráfica das partidas

@@ -8,7 +8,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from scripts.chess_logic import ChessGame
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="static", template_folder="templates")
 socketio = SocketIO(app, cors_allowed_origins="*")
 game = ChessGame()
 
@@ -26,7 +26,7 @@ def get_board():
 def make_move():
     """Recebe um movimento e aplica-o ao tabuleiro."""
     data = request.get_json()
-    move = data.get["move"]
+    move = data.get("move")
 
     if not move:
         return jsonify({"status": "error", "message": "No move provided."})

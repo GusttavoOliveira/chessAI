@@ -4,7 +4,7 @@ import chess.svg
 class ChessGame():
     def __init__(self):
         self.board = chess.Board()
-        self.svg_path = "../static/board.svg"
+        self.svg_path = "../api/static/board.svg"
         self.save_svg()
 
     def save_svg(self):
