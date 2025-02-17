@@ -26,7 +26,7 @@ def get_board():
 def make_move():
     """Recebe um movimento e aplica-o ao tabuleiro."""
     data = request.get_json()
-    move = data.get["move"]
+    move = data.get("move")
 
     if not move:
         return jsonify({"status": "error", "message": "No move provided."})
