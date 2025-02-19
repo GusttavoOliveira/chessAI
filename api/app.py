@@ -32,9 +32,11 @@ def make_move():
         return jsonify({"status": "error", "message": "No move provided."})
 
     response = game.make_move(move)
+    
 
     if response["status"] == "success":
         socketio.emit("update_board", {"message": "Board updated!"})
+        game.make_response_move()
 
     return jsonify(response)
 
