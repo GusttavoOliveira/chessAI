@@ -29,12 +29,36 @@ def make_move():
     move = data.get("move")
 
     if not move:
-        return jsonify({"status": "error", "message": "No move provided."})
+        response = jsonify({"status": "error", "message": "No move provided."})
+        return response
 
     response = game.make_move(move)
 
     if response["status"] == "success":
+        
+        # Validar casos especiais
+        if response["message"] == "Checkmate!":
+            socketio.emit("update_board", {"message": "Checkmate!"})
+            return jsonify(response)
+        elif response["message"] == "Stalemate!":
+            socketio.emit("update_board", {"message": "Stalemate!"})
+            return jsonify(response)
+        elif response["message"] == "Insufficient material!":
+            socketio.emit("update_board", {"message": "Insufficient material!"})
+            return jsonify(response)
+        elif response["message"] == "Fifty move rule!":
+            socketio.emit("update_board", {"message": "Fifty move rule!"})
+            return jsonify(response)
+        elif response["message"] == "Fivefold repetition!":
+            socketio.emit("update_board", {"message": "Fivefold repetition!"})
+            return jsonify(response)
+        elif response["message"] == "Threefold repetition!":
+            socketio.emit("update_board", {"message": "Threefold repetition!"})
+            return jsonify(response)
+
+        # Caso comum de movimentação valida
         socketio.emit("update_board", {"message": "Board updated!"})
+        game.make_response_move()
 
     return jsonify(response)
 
