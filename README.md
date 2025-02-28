@@ -1,22 +1,21 @@
 # ChessAI: Inteligência Artificial Aprendendo Xadrez
 
 ## 📌 Sobre o Projeto
-Este projeto tem como objetivo desenvolver e treinar duas inteligências artificiais para jogar xadrez, utilizando aprendizado de máquina e técnicas de reforço. As IAs irão evoluir suas estratégias jogando repetidamente uma contra a outra, aprendendo com suas partidas e ajustando suas decisões para melhorar seu desempenho ao longo do tempo.
+Este projeto tem como objetivo desenvolver e treinar duas inteligências artificiais para jogar xadrez, utilizando aprendizado de máquina. Em primeiro momento a intenção é fazer com que dois modelos que usam algortimos distintos joguem xadrez. Posteriormente, depois que os dois modelos estiverem implementados será possívei fazer testes mais complexos, como por exemplo: colocar ambos os modelos para jogar um contra o outro e avaliar o desempenho; usar as partidas em que eles se enfrentam para retreinar os modelos e etc. 
 
 ## 🧠 Tecnologias Utilizadas
 - Python 🐍
 - `chess` ♟️ (biblioteca para manipulação do jogo de xadrez)
-- `PyTorch` (para aprendizado de máquina)
-- `OpenAI Gym` (para ambiente de reforço)
+- `Scikit-Learn` (para uma árvore ou floresta de decisão)
+- `PyTorch` (para uma rede neural)
 - `Flask` (Como API para visualizar as partidas)
-- `Matplotlib` (para visualização do progresso do treinamento)
 - `Jupyter Notebook` (para experimentação e análise)
 
 ## 🚀 Como Executar o Projeto
 
 ### 1️⃣ Clonar o Repositório
 ```bash
-git clone https://github.com/GusttavoOliveira/chessAI.git
+git clone [https://github.com/GusttavoOliveira/chessAI.git](https://github.com/GusttavoOliveira/chessAI.git)
 cd chessAI
 ```
 
@@ -55,10 +54,11 @@ chessAI/
 4. O progresso pode ser acompanhado através de estatísticas e gráficos gerados pelo script.
 
 ## 📌 Roadmap
-- [OK] Implementar motor básico de jogo
-- [ ] Criar a lógica de aprendizado por reforço
+- [X] Implementar motor básico de jogo
+- [ ] Criar a lógica do modelo de árvore de decisão
+- [ ] Criar a lógica do modelo de rede neural
 - [ ] Treinar e salvar modelos
-- [ ] Criar visualização gráfica das partidas
+- [X] Criar visualização gráfica das partidas
 - [ ] Desenvolver um dashboard para acompanhar o progresso
 
 ## 🤝 Contribuição
@@ -69,9 +69,6 @@ Contribuições são bem-vindas! Para contribuir:
 4. Faça um **push** para o branch (`git push origin minha-feature`)
 5. Abra um **Pull Request** 📢
 
-## 📜 Licença
-Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
 ---
-✍️ Desenvolvido por [Gusttavo Oliveira](https://github.com/GusttavoOliveira) 🚀
+✍️ Desenvolvido por [Luiz Gusttavo](https://github.com/GusttavoOliveira) 🚀
 
